@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Tahini</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" media="screen">
+</head>
+
+<style>
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    header {
+        background-image: url("https://live.southafrica.net/media/28576/dsc09302_ret_rgb.jpg?anchor=center&mode=crop&quality=100&width=1920&height=810&bgcolor=white&rnd=131443327510000000");
+        background-size: cover;
+        height: 85vh;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    main {
+        padding-bottom: 3vh;
+    }
+    section {
+        margin: 0 auto;
+        padding: 1vw;
+        width: 80%;
+    }
+    div {
+        margin: 15px;
+        padding: 1vw;
+        border: 2px solid lightgrey;
+    }
+    img {
+        cursor: pointer;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        cursor: pointer;
+        padding-top: 3vh;
+        margin: 0;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        border-top: 2px solid lightgrey;
+    }
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style: none;
+        padding-left: 0;
+    }
+    aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2vh 4vh;
+        border-top: 2px solid lightgrey;
+    }
+    aside p {
+        width: 60%;
+    }
+    .gallery {
+        background: #EEE;
+        border: none;
+        padding: 0;
+    }
+    .gallery-cell {
+        width: 66%;
+        height: 350px;
+        margin-right: 10px;
+        background: #8C8;
+        counter-increment: gallery-cell;
+    }
+    .gallery-cell:before {
+        display: block;
+        text-align: center;
+        content: counter(gallery-cell);
+        line-height: 200px;
+        font-size: 80px;
+        color: white;
+    }
+    .flickity-viewport {
+        height: 350px;
+        border: none;
+        padding: 0;
+    }
+    .flickity-slider { 
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    .left-feature {
+        background-image: url("https://via.placeholder.com/150/88cc88/000000");
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+    .dual-feature {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .dual-feature div {
+        width: 50%;
+    }
+    .attractions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        border: none;
+    }
+    .attractions div {
+        width: 200px;
+        text-align: center;
+        border: none;
+    }
+    .menu,
+    .signin {
+        font-size: 1.5rem;
+        color: white;
+    }
+    .footer-links {
+        list-style: disc;
+    }
+    .social-icons img{
+        padding: 0 2px;
+    }
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="https://via.placeholder.com/150x50.png/88cc88/000000?text=Tahini" alt="Welcome to Tahini">
+                </li>
+                <li class="menu">
+                    MENU</li>
+                <li>
+                    <input type="search">
+                </li>
+                <li>
+                    <select>
+                        <option>USA | English</option>
+                </select>
+                </li>
+                <li class="signin">SIGN IN</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            The government of Tahini has taken special measures to enhance the fulfillment of all recommended health and safety measures due to COVID-19. Follow all posted instructions while visiting our beautiful local attractions and small businesses while at Tahini.
+            As recommended by WHO and the US CDC, face masks and coverings are required. As well as social distancing of at least 6 feet between persons. Please make sure to wash hands often or use approved 70% alcohol based hand sanitizers in the event running water and soap is unavailable.
+            An inherent risk of exposure to COVID-19 exists in any public space where people are present. Stay safe!
+        </section>
+        <section class="dual-feature">
+            <div class="left-feature">
+                <ul>
+                    <li >What to Pack</li>
+                    <li>How to Make the Most of Your Layaway</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Best Hotels</li>
+                    <li>Cheapest Rental Car Agencies</li>
+                    <li>Living with  Locals</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2 style="text-align: center;">Things to Do</h2>
+            <p style="text-align: center;">Top Local Attractions and Events</p>
+            <div class="attractions">
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Historic Sites</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Celebrity Highlights</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Fishing</p>
+                </div>
+                <div>            
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Shopping</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Snorkeling</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Safari</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Dancing</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Dining Out</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Painting</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Pottery and Crafts</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Language Class</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150/88cc88/88cc88" alt="random text">
+                    <p>Cooking Class</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="socialmedia">
+            <h3>Life in Tahini</h3>
+            <p>What Other Visitors are Doing</p>
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <img src="https://via.placeholder.com/160x50.png/88cc88/000000?text=Tahini" alt="Welcome to Tahini">
+            <li class="social-icons">   
+                <img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=F" alt="Facebook">
+                <img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=IG" alt="Instagram">
+                <img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=TW" alt="Twitter">
+                <img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=P" alt="Pinterest">
+            </li>
+        </ul>
+        <ul class="footer-links">
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+        </ul>
+        <ul class="footer-links">
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+        </ul>
+        <ul class="footer-links">
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+            <li>Attractions</li>
+
+        </ul>
+    </footer>
+    <aside>
+        <p>
+            The government of Tahini has taken special measures to enhance the fulfillment of all recommended health and safety measures due to COVID-19. 
+            Follow all posted instructions while visiting our beautiful local attractions and small businesses while at Tahini.
+            <small>reference: https://disneyworld.disney.go.com/</small>
+        </p>
+        <img src="https://via.placeholder.com/150x50.png/88cc88/000000?text=Tahini" alt="Welcome to Tahini">
+    </aside>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+</body>
+</html>
