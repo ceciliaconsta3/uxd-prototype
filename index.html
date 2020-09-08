@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Tanini</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" media="screen">
+    <link rel="stylesheet" SameSite=None href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" media="screen">
 </head>
 
 <style>
@@ -108,6 +108,11 @@
         background-repeat:no-repeat;
         background-size: cover;
     }
+    .left-feature a,
+    .right-feature a {
+        text-decoration: none;
+        color: rgb(0 0 0);
+    }
     .dual-feature {
         display: flex;
         flex-direction: row;
@@ -174,13 +179,13 @@
         <section class="dual-feature">
             <div class="left-feature">
                 <ul>
-                    <li >What to Pack</li>
+                    <li><a target="_blank" href="https://www.familyvacationcritic.com/what-to-pack-for-the-caribbean-essentials-for-families/art/">What to Pack</a></li>
                     <li>How to Make the Most of Your Layaway</li>
                 </ul>
             </div>
-            <div>
+            <div class="right-feature">
                 <ul>
-                    <li>Best Hotels</li>
+                    <li><a target="_blank" href="https://travel.usnews.com/Hotels/Caribbean/">Best Hotels</a></li>
                     <li>Cheapest Rental Car Agencies</li>
                     <li>Living with  Locals</li>
                 </ul>
@@ -260,7 +265,7 @@
         <ul>
             <img src="https://via.placeholder.com/160x50.png/88cc88/000000?text=Tanini" alt="Welcome to Tanini">
             <li class="social-icons">   
-                <img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=F" alt="Facebook">
+                <a target="_blank" href="https://www.facebook.com/bahamaislands/"><img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=F" alt="Facebook"></a>
                 <img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=IG" alt="Instagram">
                 <img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=TW" alt="Twitter">
                 <img src="https://via.placeholder.com/35x35.png/88cc88/000000?text=P" alt="Pinterest">
@@ -303,7 +308,8 @@
         </p>
         <img src="https://via.placeholder.com/150x50.png/88cc88/000000?text=Tanini" alt="Welcome to Tanini">
     </aside>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js">
+    </script>
 
     <script>
         /^[a-z][a-z]\w+$/i
