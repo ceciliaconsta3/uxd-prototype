@@ -12,6 +12,9 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
+    
+    html { scroll-behavior: smooth;}
+
     body {
         margin: 0;
         padding: 0;
@@ -130,10 +133,59 @@
         text-align: center;
         border: none;
     }
-    .menu,
-    .signin {
+    .menu {
         font-size: 1.5rem;
         color: white;
+    }
+    .menu {
+        background: #88cc88;
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .menu button {
+        cursor: pointer;
+        border: none;
+        color: black;
+        background: #88cc88;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px 5px 0 0;
+        outline: none;
+    }
+    .dropdown {
+        cursor: pointer;
+        display: none;
+        background: #f1f1f1;
+        font-size: 1rem;
+        width: 150px;
+        margin-left: 0;
+        border-radius: 0px 0px 5px 5px;
+        margin-top: 0;
+        border: none;
+    }
+    .dropdown a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+    .dropdown a:hover {
+        background: #dddddd;
+        border-radius: 0px 0px 5px 5px;
+    }
+    .show {
+        cursor: pointer;
+        display: block;
+        background: #f1f1f1;
+        font-size: 1rem;
+        width: 150px;
+        margin-left: 0;
+        border-radius: 0px 0px 5px 5px;
+        margin-top: 0;
+        border: none;
+        padding: 0;
     }
     .footer-links {
         list-style: disc;
@@ -149,19 +201,23 @@
         <nav>
             <ul>
                 <li>
-                    <img src="https://via.placeholder.com/150x50.png/88cc88/000000?text=Tanini" alt="Welcome to Tanini">
+                    <img src="https://via.placeholder.com/300x100.png/88cc88/000000?text=Tanini" alt="Welcome to Tanini">
                 </li>
                 <li class="menu">
-                    MENU</li>
+                    <button id="menu-btn">MENU</button>
+                    <div id="menu-dpdwn" class="dropdown">
+                        <a href="#events">Attractions & Events</a>
+                        <a href="#gallery">Gallery</a>
+                    </div>
+                </li>
                 <li>
                     <input type="search">
                 </li>
                 <li>
                     <select>
                         <option>USA | English</option>
-                </select>
+                    </select>
                 </li>
-                <li class="signin">SIGN IN</li>
             </ul>
         </nav>
     </header>
@@ -171,7 +227,7 @@
             As recommended by WHO and the US CDC, face masks and coverings are required. As well as social distancing of at least 6 feet between persons. Please make sure to wash hands often or use approved 70% alcohol based hand sanitizers in the event running water and soap is unavailable.
             An inherent risk of exposure to COVID-19 exists in any public space where people are present. Stay safe!<small>(Disney, 2020)</small>
         </section>
-        <section class="dual-feature">
+        <section id="trips" class="dual-feature">
             <div class="left-feature">
                 <ul>
                     <li >What to Pack</li>
@@ -186,7 +242,7 @@
                 </ul>
             </div>
         </section>
-        <section>
+        <section id="events">
             <h2 style="text-align: center;">Things to Do</h2>
             <p style="text-align: center;">Top Local Attractions and Events</p>
             <div class="attractions">
@@ -241,7 +297,7 @@
 
             </div>
         </section>
-        <section class="socialmedia">
+        <section id="gallery" class="socialmedia">
             <h3>Life in Tanini</h3>
             <p>What Other Visitors are Doing</p>
             <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
@@ -306,8 +362,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 
     <script>
-        /^[a-z][a-z]\w+$/i
-        // FCC saving here
+        function toggleDropdown(){
+            document.querySelector("#menu-dpdwn").classList.toggle("show");
+        }
+        function checkDropdownLeftOpen(){
+            console.log(window.pageYOffset + 'px');
+            if (window.pageYOffset > 200){
+                toggleDropdown();
+            }
+        }
+        document.querySelector("#menu-btn").addEventListener("click", toggleDropdown);
+        window.addEventListener("scroll", checkDropdownLeftOpen);
+
+            // if (document.querySelector("#menu-dpdwn").style.display = "none"){
+            //     document.querySelector("#menu-dpdwn").style.display = "block";
+            // } else {
+            //     document.querySelector("#menu-dpdwn").style.display = "none";
+            // }
     </script>
 </body>
 </html>
